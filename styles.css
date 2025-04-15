@@ -6,16 +6,101 @@
 }
 
 body {
-    font-family: 'Nunito Sans', 'Poppins', sans-serif;
+    font-family: 'Cormorant Garamond', 'Lora', serif;
     line-height: 1.6;
     color: #333;
     overflow-x: hidden;
+    /* Custom pen cursor for entire website */
+    cursor: url("data:image/svg+xml,%3Csvg width='32' height='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5,27 L10,10 Q15,5 20,10 L27,5' stroke='%23333' fill='transparent' stroke-width='1.5'/%3E%3C/svg%3E"), auto;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+/* Elegant Cursive Typography Styles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Pinyon Script', 'Tangerine', 'Great Vibes', cursive;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+/* Handwritten Underline Effect */
+.handwritten-underline {
+    position: relative;
+    display: inline-block;
+}
+
+.handwritten-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,5 Q25,0 50,5 T100,5' stroke='%23333' fill='transparent' stroke-width='1.5'/%3E%3C/svg%3E");
+    background-size: 100px 10px;
+    background-repeat: repeat-x;
+    opacity: 0.5;
+}
+
+/* Ink Splatter Effect */
+.ink-splatter {
+    position: relative;
+}
+
+.ink-splatter::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20,20 q5,-10 10,-5 t5,10 t-5,10 t-10,5 t-10,-5 t-5,-10 t5,-10 t10,-5' fill='%23333' opacity='0.1'/%3E%3C/svg%3E");
+    background-size: contain;
+    z-index: -1;
+    top: -10px;
+    left: -15px;
+}
+
+/* Quill Pen Cursor for interactive elements */
+a, button, .book-item, input, textarea {
+    cursor: url("data:image/svg+xml,%3Csvg width='32' height='32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5,27 L10,10 Q15,5 20,10 L27,5' stroke='%23ff5e5e' fill='transparent' stroke-width='1.5'/%3E%3C/svg%3E"), pointer;
+}
+
+/* Flourish Decorations */
+.flourish {
+    position: relative;
+    padding: 0 30px;
+}
+
+.flourish::before, .flourish::after {
+    content: '✦';
+    position: absolute;
+    font-size: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.6;
+    color: #555;
+}
+
+.flourish::before {
+    left: 0;
+}
+
+.flourish::after {
+    right: 0;
+}
+
+/* Elegant Line Separators */
+.elegant-separator {
+    display: block;
+    width: 150px;
+    height: 15px;
+    margin: 30px auto;
+    background-image: url("data:image/svg+xml,%3Csvg width='150' height='15' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,7.5 Q25,0 75,7.5 T150,7.5 M37.5,7.5 L37.5,0 M75,7.5 L75,0 M112.5,7.5 L112.5,0' stroke='%23333' fill='transparent' stroke-width='1'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    opacity: 0.5;
 }
 
 /* Navbar dengan animasi menarik */
@@ -48,15 +133,23 @@ body {
     padding: 0 20px;
 }
 
+/* Logo positioning at the edge */
+.logo {
+    position: relative;
+    left: -10px; /* Move logo slightly to the left edge */
+}
+
 .logo h1 {
-    font-family: 'Montserrat Alternates', 'Pacifico', cursive;
-    font-size: 28px;
-    color: #333;
+    font-family: 'Pinyon Script', 'Great Vibes', cursive;
+    font-size: 36px;
+    color: #3a3a3a;
     margin: 0;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     position: relative;
     transition: transform 0.3s ease;
-    font-weight: 700;
+    font-weight: 400;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.05);
+    padding-left: 5px; /* Add some padding to prevent extreme edge alignment */
 }
 
 .logo h1:hover {
@@ -78,6 +171,7 @@ body {
     width: 100%;
 }
 
+/* Menu styling with pen nib effect */
 .menu {
     display: flex;
     gap: 25px;
@@ -89,15 +183,17 @@ body {
     align-items: center;
     text-decoration: none;
     color: #333;
-    font-family: 'Quicksand', 'Roboto', sans-serif;
-    font-size: 15px;
-    font-weight: 600;
+    font-family: 'Alex Brush', 'Satisfy', cursive;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
     transition: all 0.3s ease;
     padding: 5px 8px;
     position: relative;
     overflow: hidden;
 }
 
+/* Pen nib hover effect for menu items */
 .menu a::before {
     content: '';
     position: absolute;
@@ -110,6 +206,20 @@ body {
     transition: transform 0.3s ease;
 }
 
+/* Ink drop effect for menu on hover */
+.menu a::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: rgba(255, 94, 94, 0);
+    border-radius: 50%;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    transition: all 0.3s ease;
+}
+
 .menu a:hover {
     color: #ff5e5e;
     transform: translateY(-2px);
@@ -117,6 +227,11 @@ body {
 
 .menu a:hover::before {
     transform: translateX(0);
+}
+
+.menu a:hover::after {
+    transform: translateX(-50%) scale(1);
+    background-color: rgba(255, 94, 94, 0.5);
 }
 
 .menu a i {
@@ -136,6 +251,11 @@ body {
 
 .menu a.active::before {
     transform: translateX(0);
+}
+
+.menu a.active::after {
+    background-color: rgba(255, 94, 94, 0.5);
+    transform: translateX(-50%) scale(1);
 }
 
 /* Header */
@@ -158,26 +278,30 @@ body {
 }
 
 .left-content h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 42px;
-    margin-bottom: 10px;
-    color: #333;
-    font-weight: 700;
+    font-family: 'Pinyon Script', 'Great Vibes', cursive;
+    font-size: 52px;
+    margin-bottom: 15px;
+    color: #2a2a2a;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    line-height: 1.2;
 }
 
 .left-content h2 {
-    font-family: 'Lora', 'Playfair Display', serif;
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: #333;
-    font-weight: 600;
+    font-family: 'Alex Brush', 'Satisfy', cursive;
+    font-size: 42px;
+    margin-bottom: 25px;
+    color: #3a3a3a;
+    font-weight: 400;
+    line-height: 1.3;
 }
 
 .left-content p {
-    font-family: 'Source Sans Pro', 'Poppins', sans-serif;
-    font-size: 18px;
+    font-family: 'Cormorant Garamond', 'Lora', serif;
+    font-size: 20px;
+    font-style: italic;
     margin-bottom: 30px;
-    color: #666;
+    color: #555;
     line-height: 1.8;
 }
 
@@ -261,16 +385,17 @@ body {
 
 .slide-caption h3 {
     margin: 0 0 5px 0;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
+    font-family: 'Alex Brush', 'Satisfy', cursive;
+    font-size: 20px;
+    font-weight: 400;
 }
 
 .slide-caption p {
     margin: 0;
-    font-family: 'Nunito', sans-serif;
-    font-size: 12px;
+    font-family: 'Cormorant Garamond', 'Nunito', sans-serif;
+    font-size: 14px;
     opacity: 0.9;
+    font-style: italic;
 }
 
 /* Navigation dots */
@@ -305,18 +430,20 @@ body {
 }
 
 .karya-terbaru h2 {
-    font-family: 'Merriweather', 'Playfair Display', serif;
-    font-size: 36px;
+    font-family: 'Pinyon Script', 'Great Vibes', cursive;
+    font-size: 48px;
     margin-bottom: 15px;
-    color: #333;
-    font-weight: 700;
+    color: #2a2a2a;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 .section-desc {
-    font-family: 'Open Sans', 'Poppins', sans-serif;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
     margin-bottom: 40px;
-    color: #666;
-    font-size: 16px;
+    color: #555;
+    font-size: 20px;
 }
 
 .book-grid {
@@ -344,32 +471,35 @@ body {
 }
 
 .book-item h3 {
-    font-family: 'Libre Baskerville', serif;
-    font-size: 20px;
-    margin-top: 10px;
-    font-weight: 700;
+    font-family: 'Alex Brush', 'Satisfy', cursive;
+    font-size: 28px;
+    margin-top: 15px;
+    font-weight: 400;
+    color: #333;
 }
 
 .book-item h4 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: italic;
     margin-top: 5px;
     color: #555;
 }
 
 .book-info,
 .book-date {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 14px;
+    font-style: italic;
     color: #777;
     margin-top: 5px;
 }
 
 .book-desc {
-    font-family: 'Nunito', sans-serif;
-    margin-top: 10px;
-    font-size: 15px;
+    font-family: 'Cormorant Garamond', serif;
+    margin-top: 12px;
+    font-size: 17px;
     line-height: 1.6;
 }
 
@@ -390,18 +520,20 @@ body {
 }
 
 .about-text h2 {
-    font-family: 'Merriweather', 'Playfair Display', serif;
-    font-size: 36px;
+    font-family: 'Pinyon Script', 'Great Vibes', cursive;
+    font-size: 48px;
     margin-bottom: 20px;
-    color: #333;
-    font-weight: 700;
+    color: #2a2a2a;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 .about-text p {
-    font-family: 'Source Sans Pro', 'Poppins', sans-serif;
-    font-size: 18px;
+    font-family: 'Cormorant Garamond', 'Lora', serif;
+    font-size: 20px;
+    font-style: italic;
     margin-bottom: 30px;
-    color: #666;
+    color: #555;
     line-height: 1.8;
 }
 
@@ -422,18 +554,19 @@ body {
 }
 
 .achievement-info h4 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+    font-family: 'Alex Brush', 'Satisfy', cursive;
+    font-size: 24px;
     margin-bottom: 5px;
     color: #333;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 .achievement-info p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
     color: #777;
     line-height: 1.5;
+    font-style: italic;
 }
 
 .about-image {
@@ -454,11 +587,12 @@ body {
 }
 
 .hubungi-saya h2 {
-    font-family: 'Merriweather', 'Playfair Display', serif;
-    font-size: 36px;
+    font-family: 'Pinyon Script', 'Great Vibes', cursive;
+    font-size: 48px;
     margin-bottom: 15px;
-    color: #333;
-    font-weight: 700;
+    color: #2a2a2a;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 .contact-form {
@@ -473,9 +607,11 @@ body {
 
 label {
     display: block;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600;
-    margin-bottom: 5px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 18px;
+    margin-bottom: 8px;
 }
 
 input,
@@ -484,22 +620,23 @@ textarea {
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-family: 'Nunito', 'Poppins', sans-serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 16px;
+    font-style: italic;
 }
 
 .btn-submit {
     background-color: #ff6b6b;
     color: #fff;
-    padding: 12px 24px;
+    padding: 10px 30px;
     border: none;
     border-radius: 5px;
-    font-family: 'Quicksand', 'Poppins', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
+    font-family: 'Alex Brush', 'Satisfy', cursive;
+    font-size: 22px;
+    font-weight: 400;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
 }
 
 .btn-submit:hover {
@@ -512,8 +649,9 @@ textarea {
     color: #fff;
     padding: 20px 0;
     text-align: center;
-    font-family: 'Work Sans', sans-serif;
-    font-size: 14px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-style: italic;
 }
 
 /* Animasi Buku Berjatuhan */
@@ -597,8 +735,8 @@ textarea {
     width: 100%;
     text-align: center;
     font-size: 8px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
+    font-family: 'Alex Brush', 'Satisfy', cursive;
+    font-weight: 400;
     padding: 0 5px;
     transform: rotate(-90deg);
     transform-origin: center;
@@ -629,6 +767,21 @@ textarea {
         transform: translateY(100vh) rotate(360deg);
         opacity: 0;
     }
+}
+
+/* Enhanced Pen Cursor Animation */
+.pen-cursor {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.7;
+    transition: transform 0.1s ease;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10,30 L15,10 Q20,5 25,10 L30,5' stroke='%23333' stroke-width='2' fill='transparent'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(-45deg);
 }
 
 /* Responsive adjustments */
@@ -662,4 +815,14 @@ textarea {
         flex-direction: column;
         gap: 30px;
     }
+    
+    /* Adjust logo position for mobile */
+    .logo {
+        left: 0;
+    }
 }
+
+/* Font Import Links (add to your HTML head) */
+/*
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Great+Vibes&family=Alex+Brush&family=Tangerine:wght@400;700&family=Satisfy&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+*/

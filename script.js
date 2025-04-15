@@ -340,8 +340,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // Data untuk slideshow
         const slideshowData = [
             {
-                image: 'img/Mencari Jejak Masa Muda.png',
-                title: 'Mencari Jejak Masa Muda',
+                image: 'img/WillyAnakSekolah.png',
+                title: 'Willy Anak Sekolah',
                 description: 'Refleksi mendalam tentang berbagai aspek kehidupan masa lalu.',
                 isBestSeller: true
             },
@@ -358,13 +358,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 isBestSeller: false
             },
             {
-                image: 'img/Keseharian Mahasiswa.png',
+                image: 'img/KeseharianMahasiswa.png',
                 title: 'Keseharian Mahasiswa',
                 description: 'Tentang keluh kesah dan keseruan saat menjadi mahasiswa',
                 isBestSeller: true
             },
             {
-                image: 'img/Mencari Jejak Masa Muda.png',
+                image: 'img/MencariJejakMasaMuda.png',
                 title: 'Mencari Jejak Masa Muda',
                 description: 'Memoir tentang nostalgia perjalanan hidup',
                 isBestSeller: false
