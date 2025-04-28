@@ -6,6 +6,7 @@
     <title>Senandika - Portofolio Penulis</title>
     <!-- Font yang diperbarui untuk tampilan lebih bagus -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;600&family=Montserrat:wght@400;600;700&family=Montserrat+Alternates:wght@400;700&family=Quicksand:wght@400;600;700&family=Nunito:wght@400;600&family=Source+Sans+Pro:wght@400;600&family=Merriweather:wght@400;700&family=Open+Sans&family=Raleway:wght@400;600&family=Libre+Baskerville:wght@400;700&family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
@@ -13,13 +14,13 @@
     <nav class="navbar">
         <div class="container">
             <div class="logo">
-                <h1>SENANDIKA</h1>
+                <h1 class="animate__animated animate__fadeInLeft">SENANDIKA</h1>
             </div>
             <div class="menu">
-                <a href="#beranda" class="active"><i class="fas fa-home"></i>Beranda</a>
-                <a href="#karya"><i class="fas fa-book"></i>Karya</a>
-                <a href="#tentang"><i class="fas fa-user"></i>Tentang</a>
-                <a href="#kontak"><i class="fas fa-envelope"></i>Kontak</a>
+                <a href="#beranda" class="active animate__animated animate__fadeInDown"><i class="fas fa-home"></i>Beranda</a>
+                <a href="#karya" class="animate__animated animate__fadeInDown"><i class="fas fa-book"></i>Karya</a>
+                <a href="#tentang" class="animate__animated animate__fadeInDown"><i class="fas fa-user"></i>Tentang</a>
+                <a href="#kontak" class="animate__animated animate__fadeInDown"><i class="fas fa-envelope"></i>Kontak</a>
             </div>
         </div>
     </nav>
@@ -29,9 +30,9 @@
         <div class="container">
             <div class="header-content">
                 <div class="left-content">
-                    <h1>Agy.Alghifari</h1>
-                    <h2>Penulis</h2>
-                    <p>Saya seorang penulis yang berdedikasi untuk menciptakan karya yang menginspirasi dan memberikan dampak positif bagi pembaca.</p>
+                    <h1 class="animate__animated animate__fadeIn">Agy.Alghifari</h1>
+                    <h2 class="animate__animated animate__fadeIn animate__delay-1s">Penulis</h2>
+                    <p class="animate__animated animate__fadeIn animate__delay-2s">Saya seorang penulis yang berdedikasi untuk menciptakan karya yang menginspirasi dan memberikan dampak positif bagi pembaca.</p>
                 </div>
                 <div class="right-content">
                     <!-- Area untuk slideshow -->
@@ -44,12 +45,12 @@
     <!-- Karya Terbaru Section -->
     <section class="karya-terbaru" id="karya">
         <div class="container">
-            <h2>Karya Terbaru</h2>
-            <p class="section-desc">Berikut adalah beberapa karya terbaru yang telah saya tulis.</p>
+            <h2 class="animate__animated animate__fadeInUp">Karya Terbaru</h2>
+            <p class="section-desc animate__animated animate__fadeInUp animate__delay-1s">Berikut adalah beberapa karya terbaru yang telah saya tulis.</p>
             
             <div class="book-grid">
                 <!-- Book 1 -->
-                <div class="book-item">
+                <div class="book-item animate__animated animate__zoomIn">
                     <div class="book-image">
                         <img src="img/Kehidupan.png" alt="Puisi">
                     </div>
@@ -57,13 +58,11 @@
                     <h4>Agy.Alghifari</h4>
                     <p class="book-info">Puisi</p>
                     <p class="book-date">2023</p>
-                    <p class="book-desc">Sebuah perjalanan melintasi 
-                        waktu yang mengungkap misteri 
-                        masa lalu.</p>
+                    <p class="book-desc">Sebuah perjalanan melintasi waktu yang mengungkap misteri masa lalu.</p>
                 </div>
                 
                 <!-- Book 2 -->
-                <div class="book-item">
+                <div class="book-item animate__animated animate__zoomIn animate__delay-1s">
                     <div class="book-image">
                         <img src="img/Rinduyangtaktahucarapamit.png" alt="Untitled">
                     </div>
@@ -75,7 +74,7 @@
                 </div>
                 
                 <!-- Book 3 -->
-                <div class="book-item">
+                <div class="book-item animate__animated animate__zoomIn animate__delay-2s">
                     <div class="book-image">
                         <img src="img/WillyAnakSekolah.png" alt="Willy">
                     </div>
@@ -87,7 +86,7 @@
                 </div>
                 
                 <!-- Book 4 -->
-                <div class="book-item">
+                <div class="book-item animate__animated animate__zoomIn animate__delay-3s">
                     <div class="book-image">
                         <img src="img/MencariJejakMasamuda.png" alt="Mencari Jejak Masa Muda">
                     </div>
@@ -95,9 +94,7 @@
                     <h4>Agy.Alghifari</h4>
                     <p class="book-info">Novel</p>
                     <p class="book-date">2024</p>
-                    <p class="book-desc">Refleksi mendalam tentang 
-                        berbagai aspek kehidupan 
-                        masa lalu.</p>
+                    <p class="book-desc">Refleksi mendalam tentang berbagai aspek kehidupan masa lalu.</p>
                 </div>
             </div>
         </div>
@@ -107,14 +104,14 @@
     <section class="tentang-saya" id="tentang">
         <div class="container">
             <div class="about-content">
-                <div class="about-text">
+                <div class="about-text animate__animated animate__fadeInUp">
                     <h2>Tentang Saya</h2>
                     <p>
                         Seorang penulis yang mendedikasikan karya-karyanya yang menginspirasi bagi banyak orang. Dengan semangat kreativitas, saya terus mengeksplorasi tema-tema kehidupan sehari-hari untuk menjadi cerita yang menarik serta memberikan wawasan baru bagi para pembaca.
                     </p>
                     
                     <div class="achievements">
-                        <div class="achievement-item">
+                        <div class="achievement-item animate__animated animate__fadeInUp">
                             <div class="achievement-icon">
                                 <span>📚</span>
                             </div>
@@ -124,7 +121,7 @@
                             </div>
                         </div>
                         
-                        <div class="achievement-item">
+                        <div class="achievement-item animate__animated animate__fadeInUp animate__delay-1s">
                             <div class="achievement-icon">
                                 <span>🏆</span>
                             </div>
@@ -134,7 +131,7 @@
                             </div>
                         </div>
                         
-                        <div class="achievement-item">
+                        <div class="achievement-item animate__animated animate__fadeInUp animate__delay-2s">
                             <div class="achievement-icon">
                                 <span>👥</span>
                             </div>
@@ -145,7 +142,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="about-image">
+                <div class="about-image animate__animated animate__fadeInRight">
                     <img src="img/Foto Tentang Saya.jpg" alt="Penulis" class="profile-image">
                 </div>
             </div>
@@ -155,8 +152,8 @@
     <!-- Hubungi Saya Section -->
     <section class="hubungi-saya" id="kontak">
         <div class="container">
-            <h2>Hubungi Saya</h2>
-            <p class="section-desc">Tertarik untuk berkolaborasi atau memiliki pertanyaan? Silakan hubungi saya.</p>
+            <h2 class="animate__animated animate__fadeInUp">Hubungi Saya</h2>
+            <p class="section-desc animate__animated animate__fadeInUp animate__delay-1s">Tertarik untuk berkolaborasi atau memiliki pertanyaan? Silakan hubungi saya.</p>
             
             <form class="contact-form" id="contactForm">
                 <div class="form-group">
@@ -174,7 +171,7 @@
                     <textarea id="message" rows="4" placeholder="Masukkan pesan Anda..." required></textarea>
                 </div>
                 
-                <button type="submit" class="btn-submit">Kirim Pesan</button>
+                <button type="submit" class="btn-submit animate__animated animate__pulse">Kirim Pesan</button>
             </form>
         </div>
     </section>
